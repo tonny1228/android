@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="works.tonny.mobile.demo4.SettingFragment">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_relative"
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+               <TableLayout
+                    style="@style/activity_item_bg"
+                    android:background="@drawable/activity_item_bg"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0">
+
+                    <TableRow
+                        android:id="@+id/fj"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/locate"
+                            android:drawablePadding="10.0dip"
+                            android:text="附近的种犬" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/fjjlb"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/locate"
+                            android:drawablePadding="10.0dip"
+                            android:text="附近的俱乐部" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+                    <TableRow
+                        android:id="@+id/fjqs"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/locate"
+                            android:drawablePadding="10.0dip"
+                            android:text="附近的犬舍" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+                </TableLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

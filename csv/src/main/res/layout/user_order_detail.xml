@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.user.OrderDetailActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/form_row"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="订单号: " />
+
+                        <TextView
+                            android:id="@+id/ddh"
+                            style="@style/form_table_row_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"></TextView>
+                    </LinearLayout>
+
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/form_row"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="日期: " />
+
+                        <TextView
+                            android:id="@+id/date"
+                            style="@style/form_table_row_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/form_row"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="收货人: " />
+
+                        <TextView
+                            android:id="@+id/shr"
+                            style="@style/form_table_row_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/form_row"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="总金额: " />
+
+                        <TextView
+                            android:id="@+id/je"
+                            style="@style/form_table_row_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </TableRow>
+
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/form_row"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="状态: " />
+
+                        <TextView
+                            android:id="@+id/zt"
+                            style="@style/form_table_row_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/list_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

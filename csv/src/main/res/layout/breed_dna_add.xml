@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.DNAAddActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/activity_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_label"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="血统证书号" />
+
+                <EditText
+                    android:id="@+id/xtzsh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/form_label"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="耳号" />
+
+                <EditText
+                    android:id="@+id/eh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_item_bg"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="CSV基因位点分析申请 （单价：400元）" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <CheckBox
+                        android:id="@+id/jy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="本犬基因位点分析" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+
+                    android:background="@drawable/form_item_bg"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="CSV亲子鉴定申请（单价：150元）" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="亲子鉴定比对方" />
+
+                        <CheckBox
+                            android:id="@+id/qzjdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="父亲犬" />
+
+                        <CheckBox
+                            android:id="@+id/qzjdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="母亲犬" />
+                    </LinearLayout>
+
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

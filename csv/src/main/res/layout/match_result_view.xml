@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.match.ResultViewActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/activity_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="名称：" />
+
+                <TextView
+                    android:id="@+id/mc"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="血统证书号：" />
+
+                <TextView
+                    android:id="@+id/xtzsh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="耳号：" />
+
+                <TextView
+                    android:id="@+id/eh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

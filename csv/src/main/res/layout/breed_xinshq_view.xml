@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.PeiquanxxViewActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/activity_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="配犬证明号" />
+
+                <TextView
+                    android:id="@+id/pqbh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="配犬日期" />
+
+                <TextView
+                    android:id="@+id/pqrq"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/csrq"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="父犬血统证书号" />
+
+                <TextView
+                    android:id="@+id/gqzsh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="母犬血统证书号" />
+
+                <TextView
+                    android:id="@+id/mqzsh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="犬只数" />
+
+                <TextView
+                    android:id="@+id/qzs"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="犬只总数" />
+
+                <TextView
+                    android:id="@+id/qzzs"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="是否空窝" />
+
+                <TextView
+                    android:id="@+id/sfkw"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,409 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="works.tonny.mobile.demo4.SettingFragment">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_relative"
+        android:fadingEdge="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/user"
+                style="@style/activity_item_bg"
+                android:layout_width="match_parent"
+                android:background="@drawable/activity_item_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                    <works.tonny.mobile.widget.CircleImageView
+                        android:id="@+id/user_head"
+                        android:layout_width="100dip"
+                        android:layout_height="100dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+
+                        android:src="@drawable/noface" />
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/user_head"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/quanshe_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nickname"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/user_head"
+                        android:text=""
+                        android:textColor="#555555"
+                        android:textSize="20dp" />
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/message_num_bg"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:src="@drawable/num_bg"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true">
+
+                                <TextView
+                                    android:id="@+id/message_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#ffffff"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/message"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:src="@drawable/message" />
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    style="@style/activity_item_bg"
+                    android:background="@drawable/activity_item_bg"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0">
+
+                    <TableRow
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/recharge"
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_xufei"
+                            android:drawablePadding="10.0dip"
+                            android:text="会员续费" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/pay"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_zfb"
+                            android:drawablePadding="10.0dip"
+                            android:text="支付宝充值" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/pay_list"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_czjl"
+                            android:drawablePadding="10.0dip"
+                            android:text="充值记录" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/magazine"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_dzzz"
+                            android:drawablePadding="10.0dip"
+                            android:text="电子杂志" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/youji"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_yjcx"
+                            android:drawablePadding="10.0dip"
+                            android:text="邮寄查询" />
+
+
+                        <FrameLayout
+                            android:layout_width="38dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center_vertical">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="20dp">
+
+                                <ImageView
+                                    android:id="@+id/mail_image"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_go" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="18dp"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/mail_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="18dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="#ffffff"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+
+                        </FrameLayout>
+
+
+                    </TableRow>
+                </TableLayout>
+
+
+                <TableLayout
+                    style="@style/activity_item_bg"
+                    android:background="@drawable/activity_item_bg"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0">
+
+                    <TableRow
+                        android:id="@+id/fj"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/locate"
+                            android:drawablePadding="10.0dip"
+                            android:text="附近" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <!--TableRow
+                        android:id="@+id/message"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            android:drawableLeft="@drawable/user_wddd"
+                            style="@style/setting_row_text"
+                            android:drawablePadding="10.0dip"
+                            android:text="我的消息" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/cart"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_gwc"
+                            android:drawablePadding="10.0dip"
+                            android:text="我的购物车" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/order"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_wddd"
+                            android:drawablePadding="10.0dip"
+                            android:text="我的订单" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow-->
+
+
+                </TableLayout>
+
+
+                <TableLayout
+                    style="@style/activity_item_bg"
+                    android:background="@drawable/activity_item_bg"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0">
+
+                    <TableRow
+                        android:id="@+id/setting"
+                        style="@style/setting_row"
+                        android:background="@drawable/setting_row"
+                        android:clickable="true">
+
+                        <TextView
+                            style="@style/setting_row_text"
+                            android:drawableLeft="@drawable/user_sz"
+                            android:drawablePadding="10.0dip"
+                            android:text="设置" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="20.0dip"
+                            android:src="@drawable/icon_go" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

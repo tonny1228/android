@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.BuzxtAddActivity">
+
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="耳号" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/eh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text"
+                        style="@style/form_input_text"/>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="血统证书号" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/xtzsh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text"
+                        style="@style/form_input_text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="证书补做原因" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/bzzsyy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/buzxt_yuanyin" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

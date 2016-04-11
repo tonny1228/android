@@ -1,0 +1,552 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.BuzfyzhshAddActivity">
+
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="登记犬英文名" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_marginBottom="1dip"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/djywm"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="原件证书是否已邮寄" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/sfyyj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/shifou" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="申请时间" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/sqsj"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:focusable="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="邮寄时间" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/yjsj"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="出生日期" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/csrq"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:focusable="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="性别" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/xb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/xingbie"></Spinner>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="耳号" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/eh"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_style"
+                        android:inputType="text" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="国外血统证书号" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/gwxtzsh"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="繁殖人" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/fzr"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="国外检测" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/gwjca6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="A6" />
+
+                        <CheckBox
+                            android:id="@+id/gwjced6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:inputType="text"
+                            android:text="ED6" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="繁殖人地址" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/fzrdz"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="所属国家" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/ssgj"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="父犬血统证书号" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/fqxtzsh"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="母犬血统证书号" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/mqxtzsh"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="国外血统证书(正面)" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/gwxtzs"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:focusable="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="国外血统证书内容" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/gwxtzsnr"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:focusable="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

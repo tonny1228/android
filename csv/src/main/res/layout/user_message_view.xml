@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.user.MessageViewActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/activity_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+
+                <TableRow
+                    style="@style/form_table_row_view"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/title"
+                        style="@style/form_table_row_view_text"
+                        android:textSize="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+                <TableRow
+                    style="@style/form_table_row_view"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/date"
+                        style="@style/form_table_row_view_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_view"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/content"
+                        style="@style/form_table_row_view_text"
+                        android:layout_width="match_parent"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+
+                </TableRow>
+
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.user.RechargeActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="费用" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/feiyong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/feiyong" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="转账时间" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row">
+
+                    <EditText
+                        android:id="@+id/zzsj"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:focusable="false" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="年份" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/year"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:entries="@array/years" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="支付方式" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/zffs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/zflx" />
+
+                </TableRow>
+
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="续费类型" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <Spinner
+                        android:id="@+id/xflx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/zflx" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true"
+                    android:paddingBottom="16.0dip"
+                    android:paddingTop="16.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="备注" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/bz"
+                        style="@style/form_input_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

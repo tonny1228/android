@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.PeiQuanxxAddActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/activity_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="配犬编号" />
+
+                <EditText
+                    android:id="@+id/pqbh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="配犬日期" />
+
+                <EditText
+                    android:id="@+id/pqrq"
+                    style="@style/form_input_text"
+                    android:layout_weight="200"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="公犬"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="血统证书号" />
+
+                <EditText
+                    android:id="@+id/gqzsh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="耳号" />
+
+                <EditText
+                    android:id="@+id/gqeh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="母犬"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="血统证书号" />
+
+                <EditText
+                    android:id="@+id/mqzsh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="耳号" />
+
+                <EditText
+                    android:id="@+id/mqeh"
+                    style="@style/form_input_text"
+                    android:layout_weight="200" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

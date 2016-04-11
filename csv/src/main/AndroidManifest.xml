@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="works.tonny.mobile.demo6"
+    android:versionCode="2"
+    android:versionName="1.0.2" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="48ae76de3f" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="hfMXKAIk0dw3YFs3ZVaXHeM3" />
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="zEy4czkztA7h4pXu8gcNcNNO"/> -->
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".CartActivity"
+            android:label="@string/title_activity_cart" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="login" />
+        <activity
+            android:name=".user.UserActivity"
+            android:label="@string/title_activity_user" />
+        <activity
+            android:name=".match.MatchListActivity"
+            android:label="@string/title_activity_match_list" />
+        <activity
+            android:name=".match.MatchNoticeActivity"
+            android:label="@string/title_activity_match_list" />
+        <activity
+            android:name=".sale.SaleItemActivity"
+            android:label="@string/title_activity_sale_item" />
+        <activity
+            android:name=".breed.DNAActivity"
+            android:label="@string/title_activity_dna" />
+        <activity
+            android:name=".breed.DNAAddActivity"
+            android:label="@string/title_activity_dnaadd" />
+        <activity
+            android:name=".breed.PeiQuanxxActivity"
+            android:label="@string/title_activity_pei_quanzm" />
+        <activity
+            android:name=".breed.PeiQuanxxAddActivity"
+            android:label="@string/title_activity_pei_quan_add" />
+        <activity
+            android:name=".breed.XinshqActivity"
+            android:label="@string/title_activity_xinshq" />
+        <activity
+            android:name=".breed.XinshqAddActivity"
+            android:label="@string/title_activity_xinshq_add" />
+        <activity
+            android:name=".breed.PeiqzhmActivity"
+            android:label="@string/title_activity_peiqzhm" />
+        <activity
+            android:name=".breed.PeiqzmAddActivity"
+            android:label="@string/title_activity_peiqzm_add" />
+        <activity
+            android:name=".breed.BuzxtActivity"
+            android:label="@string/title_activity_buzxt" />
+        <activity
+            android:name=".breed.BuzxtAddActivity"
+            android:label="@string/title_activity_buzxt_add" />
+        <activity
+            android:name=".breed.BuzfyzhshActivity"
+            android:label="@string/title_activity_buzfyzhsh" />
+        <activity
+            android:name=".breed.BuzfyzhshAddActivity"
+            android:label="@string/title_activity_buzfyzhsh_add" />
+        <activity
+            android:name=".breed.QuanzbgActivity"
+            android:label="@string/title_activity_quanzbg" />
+        <activity
+            android:name=".user.MessageActivity"
+            android:label="@string/title_activity_message" />
+        <activity
+            android:name=".user.RechargeActivity"
+            android:label="@string/title_activity_recharge" />
+        <activity
+            android:name=".user.PayActivity"
+            android:label="@string/title_activity_pay" />
+        <activity
+            android:name=".user.PayListActivity"
+            android:label="@string/title_activity_pay" />
+        <activity
+            android:name=".user.OrderActivity"
+            android:label="@string/title_activity_pay" />
+        <activity
+            android:name=".match.ApplyMatchActivity"
+            android:label="@string/title_activity_apply_match" />
+        <activity
+            android:name=".match.ApplyActivity"
+            android:label="@string/title_activity_apply" />
+        <activity
+            android:name=".match.UserMatchActivity"
+            android:label="@string/title_activity_user_match" />
+        <activity
+            android:name=".match.ResultActivity"
+            android:label="@string/title_activity_result" />
+        <activity
+            android:name=".breed.DNAViewActivity"
+            android:label="@string/title_activity_dnaview" />
+        <activity
+            android:name=".breed.PeiquanxxViewActivity"
+            android:label="@string/title_activity_peiquanxx_view" />
+        <activity
+            android:name=".breed.XinshqViewActivity"
+            android:label="@string/title_activity_xinshq_view" />
+        <activity
+            android:name=".breed.PeiqzmViewActivity"
+            android:label="@string/title_activity_peiqzm_view" />
+        <activity
+            android:name=".breed.BuzxtViewActivity"
+            android:label="@string/title_activity_buzxt_view" />
+        <activity
+            android:name=".breed.BuzfyzhshViewActivity"
+            android:label="@string/title_activity_buzfyzhsh_view" />
+        <activity
+            android:name=".user.OrderDetailActivity"
+            android:label="@string/title_activity_order_detail" />
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news" />
+        <activity
+            android:name=".sale.SaleActivity"
+            android:label="@string/title_activity_news" />
+        <activity
+            android:name=".user.MessageViewActivity"
+            android:label="@string/title_activity_message_view" />
+        <activity
+            android:name=".match.UserMatchViewActivity"
+            android:label="@string/title_activity_user_match_view" />
+        <activity
+            android:name=".match.ResultViewActivity"
+            android:label="@string/title_activity_result_view" />
+        <activity
+            android:name=".query.QueryQzcxActivity"
+            android:label="@string/title_activity_query_qzcx" />
+        <activity
+            android:name=".query.QueryPqcxActivity"
+            android:label="@string/title_activity_query_qzcx" />
+        <activity
+            android:name=".query.QueryMnjpActivity"
+            android:label="@string/title_activity_query_qzcx" />
+        <activity
+            android:name=".user.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".user.PasswordActivity"
+            android:label="@string/title_activity_password" >
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:label="@string/title_activity_web_view"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="works.tonny.demo6.WebActivity.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".user.LocationActivity"
+            android:label="@string/title_activity_location" >
+        </activity>
+        <activity
+            android:name=".match.MatchViewActivity"
+            android:label="@string/title_activity_match_view" >
+        </activity>
+        <activity
+            android:name=".query.QzcxViewActivity"
+            android:label="@string/title_activity_qzcx_view" >
+        </activity>
+        <activity
+            android:name=".user.NearbyDogActivity"
+            android:label="@string/title_activity_nearby_dog" >
+        </activity>
+        <activity
+            android:name=".user.NearbyClubActivity"
+            android:label="@string/title_activity_nearby_club" >
+        </activity>
+        <activity
+            android:name=".query.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".paihang.PaihangActivity"
+            android:label="@string/title_activity_paihang" >
+        </activity>
+        <activity
+            android:name=".paihang.HjPahangActivity"
+            android:label="@string/title_activity_hj_pahang" >
+        </activity>
+        <activity
+            android:name=".paihang.KongwoActivity"
+            android:label="@string/title_activity_kongwo" >
+        </activity>
+        <activity
+            android:name=".paihang.HoudaiSLActivity"
+            android:label="@string/title_activity_houdai_sl" >
+        </activity>
+        <activity
+            android:name=".pay.AlipayActivity"
+            android:label="@string/title_activity_alipay" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".user.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name=".user.Login2Activity"
+            android:label="@string/title_activity_login2" >
+        </activity>
+        <activity
+            android:name=".user.NearbyQuanSheActivity"
+            android:label="@string/title_activity_nearby_quan_she" >
+        </activity>
+        <activity
+            android:name=".user.Nearby"
+            android:label="@string/title_activity_nearby_quan_she" >
+        </activity>
+        <activity
+            android:name=".user.NearbyQuansheViewActivity"
+            android:label="@string/title_activity_nearby_quan_she" >
+        </activity>
+        <activity
+            android:name=".match.ApplyConfirmActivity"
+            android:label="@string/title_activity_nearby_quan_she" >
+        </activity>
+        <activity
+            android:name=".user.BaiduMapActivity"
+            android:label="@string/title_activity_baidu_map" >
+        </activity>
+        <activity android:name=".user.BNDemoGuideActivity" >
+        </activity>
+        <activity android:name=".user.Magazine" >
+        </activity>
+        <activity android:name=".user.YoujiActivity" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".user.MagazineViewActivity"
+            android:label="@string/title_activity_magazine_view" >
+        </activity>
+        <activity
+            android:name=".test.TestMenuActivity"
+            android:label="@string/title_activity_test_menu" >
+        </activity>
+        <activity
+            android:name=".test.MainActivity"
+            android:label="@string/title_activity_test_image_zoom" >
+
+        </activity>
+
+    </application>
+
+</manifest>

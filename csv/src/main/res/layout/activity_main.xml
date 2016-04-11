@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        style="@style/layout_full">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:id="@+id/fragment_container"
+                    style="@style/layout_full"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/content_fragment_container"
+                        style="@style/layout_vertical"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></TabWidget>
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                style="@style/layout_vertical"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/toolbar_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/toolbar_top" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="59dp"
+                        android:layout_below="@id/toolbar_top"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/buttom_toolbar"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_fz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tab_selector_fz"
+                            android:button="@null"
+                            android:text="繁殖"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/radio_sl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tab_selector_sl"
+                            android:button="@null" />
+
+                        <RadioButton
+                            android:id="@+id/radio_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tab_selector_home"
+                            android:button="@null" />
+
+                        <RadioButton
+                            android:id="@+id/radio_cx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tab_selector_cx"
+                            android:button="@null" />
+
+                        <RadioButton
+                            android:id="@+id/radio_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/tab_selector_user"
+                            android:button="@null" />
+                    </RadioGroup>
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

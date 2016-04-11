@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the main color -->
+    <item>
+        <shape>
+            <solid android:color="#D61238"/>
+            <corners android:radius="3dip"/>
+        </shape>
+    </item>
+
+</layer-list>

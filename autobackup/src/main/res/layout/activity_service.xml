@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.autobackup.ServiceActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TableLayout
+        style="@style/activity_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/activity_item_bg"
+        android:shrinkColumns="0"
+        android:stretchColumns="1">
+
+        <TableRow
+            style="@style/setting_row"
+            android:background="@drawable/setting_row"
+            android:clickable="true">
+
+            <TextView
+                style="@style/server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地址：" />
+
+            <TextView
+                android:id="@+id/server"
+                style="@style/server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+
+        <TableRow
+            style="@style/setting_row"
+            android:background="@drawable/setting_row"
+            android:clickable="true">
+
+            <TextView
+                style="@style/server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目录：" />
+
+            <TextView
+                android:id="@+id/folder"
+                style="@style/server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            style="@style/setting_row"
+            android:background="@drawable/setting_row"
+            android:clickable="true">
+
+            <TextView
+                style="@style/server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号：" />
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            style="@style/setting_row"
+            android:background="@drawable/setting_row"
+            android:clickable="true">
+
+            <TextView
+                style="@style/server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码：" />
+
+            <TextView
+                android:id="@+id/password"
+                style="@style/server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </TableRow>
+    </TableLayout>
+
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+
+    <Button
+        android:id="@+id/addFolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加目录" />
+
+    <ListView
+        android:id="@+id/folders"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+</LinearLayout>

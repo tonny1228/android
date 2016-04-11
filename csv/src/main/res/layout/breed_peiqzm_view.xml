@@ -1,0 +1,202 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.PeiqzmViewActivity">
+
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/activity_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="服务名称" />
+
+                <TextView
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配犬证明" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="单价" />
+
+                <TextView
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200.00元" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="服务说明" />
+
+                <TextView
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="制作配犬证明" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="配犬证明号" />
+
+                <TextView
+                    android:id="@+id/pqzmh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="制作配犬证明" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="状态" />
+
+                <TextView
+                    android:id="@+id/zt"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="配犬日期" />
+
+                <TextView
+                    android:id="@+id/pqrq"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="父犬血统证书号" />
+
+                <TextView
+                    android:id="@+id/gqzsh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="母犬血统证书号" />
+
+                <TextView
+                    android:id="@+id/mqzsh"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="犬只数" />
+
+                <TextView
+                    android:id="@+id/qzs"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="犬只总数" />
+
+                <TextView
+                    android:id="@+id/qzzs"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

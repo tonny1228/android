@@ -1,0 +1,340 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.breed.XinshqAddActivity">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="配犬编号" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/pqbh"
+                        style="@style/form_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:editable="false"
+                        android:inputType="text" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="幼犬出生日期" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <EditText
+                        android:id="@+id/xinshq_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/normal_input_style"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:inputType="date"
+                        style="@style/form_input_text"/>
+
+                </TableRow>
+
+            </TableLayout>
+            <TableRow
+                style="@style/form_table_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form_row"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="犬只总数量" />
+            </TableRow>
+
+            <TableRow
+                style="@style/form_table_row_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form_row"
+                android:clickable="true">
+
+                <EditText
+                    android:id="@+id/nums"
+                    style="@style/form_input_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/normal_input_style"
+                    android:inputType="number" />
+
+            </TableRow>
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="0">
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="4"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="出生犬种" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:width="50dp"
+                        android:text="公" />
+
+                    <EditText
+                        android:id="@+id/csqz_g"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+
+                    <TextView
+                        android:width="50dp"
+                        android:text="母" />
+
+                    <EditText
+                        android:id="@+id/csqz_m"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="4"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="死胎" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:width="50dp"
+                        android:text="公" />
+
+                    <EditText
+                        android:id="@+id/st_g"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+
+                    <TextView
+                        android:width="50dp"
+
+                        android:text="母" />
+
+                    <EditText
+                        android:id="@+id/st_m"
+                        android:width="120dp"
+                        style="@style/form_input_text"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="4"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="死亡幼犬" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+
+                        android:width="50dp"
+                        android:text="公" />
+
+                    <EditText
+                        android:id="@+id/swyq_g"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+
+                    <TextView
+                        android:width="50dp"
+                        android:text="母" />
+
+                    <EditText
+                        android:id="@+id/swyq_m"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_span="4"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="申请犬数" />
+
+                </TableRow>
+
+                <TableRow
+                    style="@style/form_table_row_input"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_row"
+                    android:clickable="true">
+
+                    <TextView
+                        android:width="50dp"
+                        android:text="公" />
+
+                    <EditText
+                        android:id="@+id/sqqs_g"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+
+                    <TextView
+                        android:width="50dp"
+                        android:text="母" />
+
+                    <EditText
+                        android:id="@+id/sqqs_m"
+                        android:width="120dp"
+                        android:background="@drawable/normal_input_style"
+                        android:inputType="number"
+                        style="@style/form_input_text"
+                        android:text="" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

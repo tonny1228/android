@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">CSV</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_dog_view">DogViewActivity</string>
+    <string name="title_activity_cart">CartActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_match_list">MatchListActivity</string>
+    <string name="title_activity_sale_item">SaleItemActivity</string>
+    <string name="title_activity_dna">DNAActivity</string>
+    <string name="title_activity_dnaadd">DNAAddActivity</string>
+    <string name="title_activity_pei_quanzm">PeiQuanzmActivity</string>
+    <string name="title_activity_pei_quan_add">PeiQuanAddActivity</string>
+    <string name="title_activity_xinshq">XinshqActivity</string>
+    <string name="title_activity_xinshq_add">XinshqAddActivity</string>
+    <string name="title_activity_peiqzhm">PeiqzhmActivity</string>
+    <string name="title_activity_peiqzm_add">PeiqzmAddActivity</string>
+    <string name="title_activity_buzxt">BuzxtActivity</string>
+    <string name="title_activity_buzxt_add">BuzxtAddActivity</string>
+    <string name="title_activity_buzfyzhsh">BuzfyzhshActivity</string>
+    <string name="title_activity_buzfyzhsh_add">BuzfyzhshAddActivity</string>
+    <string name="title_activity_quanzbg">QuanzbgActivity</string>
+    <string name="title_activity_demo">DemoActivity</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_recharge">RechargeActivity</string>
+    <string-array name="feiyong">
+        <item>A类会员费(1000)</item>
+        <item>B类会员费(1000)</item>
+        <item>C类会员费(1000)</item>
+    </string-array>
+    <string-array name="years">
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+    </string-array>
+    <string-array name="zflx">
+        <item>支付宝</item>
+        <item>微信</item>
+        <item>银联</item>
+    </string-array>
+    <string-array name="xflx">
+        <item>会员续费</item>
+        <item>微信</item>
+        <item>银联</item>
+    </string-array>
+    <string name="title_activity_pay">PayActivity</string>
+    <string name="title_activity_apply_match">ApplyMatchActivity</string>
+    <string name="title_activity_apply">ApplyActivity</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+    <string-array name="lingqufangshi">
+        <item>自取</item>
+        <item>快递</item>
+    </string-array>
+    <string-array name="buzxt_yuanyin">
+        <item>遗失</item>
+        <item>损坏</item>
+        <item>其它原因</item>
+    </string-array>
+    <string-array name="shifou">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    <string-array name="xingbie">
+        <item>公</item>
+        <item>母</item>
+    </string-array>
+    <string-array name="quanzhichaxun">
+        <item>血统证书号</item>
+        <item>犬只英文名</item>
+        <item>繁殖人</item>
+        <item>耳号</item>
+        <item>芯片号</item>
+    </string-array>
+    <string name="title_activity_user_match">UserMatchActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_query">QueryActivity</string>
+    <string name="title_activity_dnaview">DNAViewActivity</string>
+    <string name="title_activity_peiquanxx_view">PeiquanxxViewActivity</string>
+    <string name="title_activity_xinshq_view">XinshqViewActivity</string>
+    <string name="title_activity_quanzbg_view">QuanzbgViewActivity</string>
+    <string name="title_activity_peiqzm_view">PeiqzmViewActivity</string>
+    <string name="title_activity_buzxt_view">BuzxtViewActivity</string>
+    <string name="title_activity_buzfyzhsh_view">BuzfyzhshViewActivity</string>
+    <string name="title_activity_order_detail">OrderDetailActivity</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="title_activity_message_view">MessageViewActivity</string>
+    <string name="title_activity_user_match_view">UserMatchViewActivity</string>
+    <string name="title_activity_result_view">ResultViewActivity</string>
+    <string name="title_activity_query_qzcx">QueryQzcxActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_password">PasswordActivity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="title_activity_match_view">MatchViewActivity</string>
+    <string name="title_activity_qzcx_view">QzcxViewActivity</string>
+    <string name="title_activity_nearby_dog">NearbyDogActivity</string>
+    <string name="title_activity_nearby_club">NearbyClubActivity</string>
+    <string name="title_activity_xtxxb">XtxxbActivity</string>
+    <string name="title_activity_ssxxb">SsxxbActivity</string>
+    <string name="title_activity_peiquan">PeiquanActivity</string>
+    <string name="title_activity_hdq">HdqActivity</string>
+    <string name="title_activity_ttq">TtqActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_paihang">PaihangActivity</string>
+    <string name="title_activity_hj_pahang">HjPahangActivity</string>
+    <string name="title_activity_kongwo">KongwoActivity</string>
+    <string name="title_activity_houdai_sl">HoudaiSLActivity</string>
+    <string name="title_activity_alipay">AlipayActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_login2">Login2Activity</string>
+    <string name="title_activity_nearby_quan_she">NearbyQuanSheActivity</string>
+    <string name="title_activity_baidu_map">BaiduMapActivity</string>
+    <string name="title_activity_magazine_view">MagazineViewActivity</string>
+    <string name="title_activity_test_menu">TestMenuActivity</string>
+    <string name="title_activity_test_image_zoom">TestImageZoomActivity</string>
+</resources>

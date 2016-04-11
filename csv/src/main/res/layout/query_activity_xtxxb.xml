@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="works.tonny.mobile.demo6.match.ResultViewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/fq"
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="父犬：" />
+
+                <TextView
+                    android:id="@+id/zwm"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ywm"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/blood"
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:text="父犬：" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imagef"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout android:id="@+id/mq"
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:text="母犬：" />
+
+                <TextView
+                    android:id="@+id/mzwm"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/form_item_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mywm"
+                    style="@style/form_table_row_view_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/mblood"
+                    android:layout_width="90dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:text="父犬：" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/mimage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="fitCenter" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

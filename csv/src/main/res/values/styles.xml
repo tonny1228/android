@@ -1,0 +1,140 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="layout_full">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <!-- 横向分布-->
+    <style name="layout_horizontal" parent="layout_full">
+        <item name="android:layout_width">0px</item>
+    </style>
+
+    <!-- 纵向分布-->
+    <style name="layout_vertical" parent="layout_full">
+        <item name="android:layout_height">0dip</item>
+    </style>
+
+
+    <style name="activity_title_bg">
+        <item name="android:layout_height">30dip</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="activity_item_bg">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#ffffff</item>
+
+    </style>
+
+    <style name="form_item_bg">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/form_item_bg</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+
+    </style>
+
+    <style name="activity_title">
+        <item name="android:textSize">24dip</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="activity_title_button">
+        <item name="android:textSize">18dip</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="sale_summary">
+        <item name="android:textColor">#444444</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+
+    <style name="form_table_row">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="form_table_row_input">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="form_table_row_view">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="form_table_srow_view">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="form_table_row_view_text">
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="form_label">
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="form_input_text">
+        <item name="android:textColor">#333333</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:textSize">18.5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/normal_input_style</item>
+    </style>
+
+    <style name="setting_row">
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_marginBottom">1px</item>
+
+    </style>
+
+    <style name="setting_row_text">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="activity_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/activity_bg</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+</resources>

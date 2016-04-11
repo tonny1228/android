@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AutoBackup</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_service_list">ServiceListActivity</string>
+    <string name="title_activity_service">ServiceActivity</string>
+    <string name="title_activity_file_browser">FileBrowserActivity</string>
+    <string name="title_activity_welcome">文件备份</string>
+</resources>
