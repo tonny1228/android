@@ -31,7 +31,7 @@ public class YoujiActivity extends AbstractListActivity {
     public YoujiActivity() {
         setUrl(Application.getUrl(R.string.url_youji));
         setItemLayout(R.layout.user_youji_item);
-        addMapping("id", R.id.list_item_title);
+        addMapping("title", R.id.list_item_title);
         addMapping("content", R.id.list_item_content);
         addMapping("state", R.id.list_item_state);
         addMapping("date", R.id.list_item_date);

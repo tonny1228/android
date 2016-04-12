@@ -166,6 +166,8 @@ public abstract class AbstractListActivity extends Activity {
         setContentView(getContentLayout());
 //        createTitleView();
 
+        beforeCreate();
+
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -201,6 +203,9 @@ public abstract class AbstractListActivity extends Activity {
         init();
 
 
+    }
+
+    protected void beforeCreate() {
     }
 
     protected abstract void init();

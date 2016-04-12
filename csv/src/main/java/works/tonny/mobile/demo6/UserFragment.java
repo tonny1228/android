@@ -175,7 +175,7 @@ public class UserFragment extends Fragment {
                 }
                 String mailnum = (String) data.get("data.info.mailnum");
 //                instance.setVisible(R.id.message, true);
-                if (num != null && !num.equals("0")) {
+                if (mailnum != null && !mailnum.equals("0")) {
                     instance.setImage(R.id.mail_image, R.drawable.num_bg);
                     instance.setText(R.id.mail_num, mailnum);
 //                    instance.setVisible(R.id.message_num, true);

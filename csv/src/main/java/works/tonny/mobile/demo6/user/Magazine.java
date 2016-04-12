@@ -127,6 +127,9 @@ public class Magazine extends Activity {
                             }
                         });
                         i++;
+                        if (i >= l.size()) {
+                            return;
+                        }
                         final Map item1 = (Map) l.get(i);
                         if (i < l.size()) {
                             final ImageView img1 = (ImageView) view.findViewById(R.id.list_item_right1);

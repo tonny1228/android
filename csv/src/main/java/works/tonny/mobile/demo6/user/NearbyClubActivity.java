@@ -1,6 +1,9 @@
 package works.tonny.mobile.demo6.user;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -11,30 +14,60 @@ import works.tonny.mobile.Application;
 import works.tonny.mobile.IntentUtils;
 import works.tonny.mobile.demo6.ListActivity;
 import works.tonny.mobile.demo6.R;
+import works.tonny.mobile.demo6.TitleHelper;
+import works.tonny.mobile.widget.AbstractListActivity;
 
-public class NearbyClubActivity extends ListActivity {
+public class NearbyClubActivity extends AbstractListActivity {
     private String url;
 
-    @Override
-    protected String getListTitle() {
-        return "附近的俱乐部";
+    private TitleHelper titleHelper;
+
+    public NearbyClubActivity() {
+        setItemLayout(R.layout.user_nearbyclub_item);
+        addMapping("name", R.id.name);
+        addMapping("distance", R.id.distance);
+        addMapping("linkman", R.id.linkman);
+        addMapping("phone", R.id.phone);
+        addMapping("img", R.id.user_head);
+        setOnLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final String[] phones = listFragment.getmAdapter().getData().get(position).get("phone").toString().split("[^\\d]+");
+                for (int i = 0; i < phones.length; i++) {
+                    phones[i] = "拨打" + phones[i];
+                }
+                new AlertDialog.Builder(NearbyClubActivity.this).setItems(phones, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phones[which].substring(2)));
+                        startActivity(intent);
+                    }
+                }).show();
+                return true;
+            }
+        });
     }
 
     @Override
-    protected int getItemLayout() {
-        return R.layout.user_nearbyclub_item;
-    }
-
-    @Override
-    protected String getUrl() {
-        if (url == null) {
-            url = Application.getUrl(R.string.url_location_club).replace("${latitude}", getIntent().getStringExtra("latitude")).replace("${longitude}", getIntent().getStringExtra("longitude"));
-        } return url;
-    }
-
-    @Override
-    protected int getLayout() {
+    protected int getContentLayout() {
         return R.layout.activity_list;
+    }
+
+
+    @Override
+    protected void beforeCreate() {
+        setUrl(Application.getUrl(R.string.url_location_club).replace("${latitude}", getIntent().getStringExtra("latitude")).replace("${longitude}", getIntent().getStringExtra("longitude")));
+    }
+
+    @Override
+    protected void init() {
+        titleHelper = TitleHelper.getInstance(this);
+        titleHelper.enableBack().setTitle("附近的俱乐部");
+    }
+
+    @Override
+    protected int getListReplaceId() {
+        return R.id.list;
     }
 
     @Override
@@ -52,10 +85,4 @@ public class NearbyClubActivity extends ListActivity {
     }
 
 
-    @Override
-    protected Map<String, Integer> getMapping() {
-        Map<String, Integer> mapping = new HashMap<String, Integer>(); mapping.put("name", R.id.name);
-        mapping.put("distance", R.id.distance); mapping.put("linkman", R.id.linkman); mapping.put("phone", R.id.phone);
-        mapping.put("img", R.id.user_head); return mapping;
-    }
 }
