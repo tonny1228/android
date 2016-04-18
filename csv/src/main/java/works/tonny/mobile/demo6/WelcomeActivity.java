@@ -32,18 +32,15 @@ public class WelcomeActivity extends Activity {
         Launcher.init(this.getBaseContext());
         setContentView(R.layout.activity_welcome);
         ImageView image = (ImageView) findViewById(R.id.welcomeimageView);
-        final Runnable task = new Runnable() {
-            public void run() {
-
-            }
-        };
 
 
         if (DeviceUtils.isNetworkConnected(this)) {
             new CheckUpdate().execute();
+        } else {
+
+            handler.postDelayed(task, 1000);//延迟调用
         }
 
-        handler.postDelayed(task, 1000);//延迟调用
 
         Application.setHost(R.string.host);
     }
@@ -54,6 +51,12 @@ public class WelcomeActivity extends Activity {
         startActivity(intent);
         finish();
     }
+
+    final Runnable task = new Runnable() {
+        public void run() {
+            goon();
+        }
+    };
 
 
     class CheckUpdate extends AsyncTask<Map<String, String>, Integer, IDLinkedHashMap> {
@@ -77,6 +80,7 @@ public class WelcomeActivity extends Activity {
             super.onPostExecute(result);
 
             if (result == null) {
+                goon();
                 return;
             }
 
@@ -122,6 +126,7 @@ public class WelcomeActivity extends Activity {
         protected IDLinkedHashMap doInBackground(Map<String, String>... params) {
             request = AbstractHttpRequest.getInstance(HttpRequest.Method.Get, Application.getUrl(R.string.url_setting_update));
             String xml = null;
+            Log.info("request");
             try {
                 xml = request.executeToString();
                 XMLParser xmlParser = new XMLParser();
@@ -129,6 +134,7 @@ public class WelcomeActivity extends Activity {
                 return (IDLinkedHashMap) xmlParser.getDatas().get("data");
             } catch (Exception e) {
                 e.printStackTrace();
+                Log.error(e);
             }
             return null;
         }

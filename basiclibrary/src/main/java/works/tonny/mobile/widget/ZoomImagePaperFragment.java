@@ -143,7 +143,9 @@ public class ZoomImagePaperFragment extends Fragment {
             titleBg.setVisibility(View.VISIBLE);
             titleView.setText(e.getTitle());
         } else {
-            titleBg.setVisibility(View.GONE);
+//            titleBg.setVisibility(View.GONE);
+            titleBg.setVisibility(View.VISIBLE);
+            titleView.setText((position + 1) + "/" + entity.size());
         }
 
         if (position > 2) {
@@ -277,6 +279,7 @@ public class ZoomImagePaperFragment extends Fragment {
         public void onPageSelected(final int position) {
             initImage(position);
             last = position;
+//            this.textView.setText(position + "/" + entity.size());
 //            runnable.i = last + 1;
         }
 

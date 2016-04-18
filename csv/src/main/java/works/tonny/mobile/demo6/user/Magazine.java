@@ -47,7 +47,7 @@ public class Magazine extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_magazine);
         init();
         request(Application.getUrl(R.string.url_magazine));
         TitleHelper.getInstance(this).enableBack().setTitle("电子杂志").setButton(R.drawable.icon_option, new View.OnClickListener() {
