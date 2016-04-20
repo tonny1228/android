@@ -154,7 +154,7 @@ public class XMLParser {
             node.depth = parent.depth + 1;
             node.setParent(parent);
             NamedNodeMap attributes = item.getAttributes();
-            Log.info(node.name);
+//            Log.info(node.name);
             for (int j = 0; j < attributes.getLength(); j++) {
                 Log.info("attr:" + node.name + " " + attributes.item(j).getNodeName());
                 node.attributes.put(attributes.item(j).getNodeName(), attributes.item(j).getTextContent().trim());
@@ -192,12 +192,12 @@ public class XMLParser {
                 for (String s : keySet) {
                     mapChild.put(s, attributes.get(s));
                 }
-                Log.info("xxx:" + name + " " + mapChild);
+//                Log.info("xxx:" + name + " " + mapChild);
             }
 
             if (!mapChild.isEmpty() && parent != null) {
                 index = parent.put(name, this.mapChild);
-                Log.info("child:" + getPath() + " " + this.mapChild);
+//                Log.info("child:" + getPath() + " " + this.mapChild);
                 datas.put(getPath(), this.mapChild);
                 this.children = null;
             }
@@ -211,7 +211,7 @@ public class XMLParser {
         }
 
         public int put(String name, Object o) {
-            Log.info("rrrr " + this.getPath() + " " + mapChild + " " + name + " " + o);
+//            Log.info("rrrr " + this.getPath() + " " + mapChild + " " + name + " " + o);
             if (!mapChild.containsKey(name)) {
                 mapChild.put(name, o);
                 if (name.equals("id"))

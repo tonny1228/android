@@ -160,8 +160,17 @@ public class ZoomImageView extends View implements Observer {
             }
             mRectDst.left = 0;
             mRectDst.top = 0;
-            mRectDst.right = viewWidth;
-            mRectDst.bottom = viewHeight;
+            float i1 = bitmapWidth * 1.0f / bitmapHeight * 1.0f;
+            float i2 = viewWidth * 1.0f / viewHeight * 1.0f;
+            float i3 = viewHeight * 1.0f / bitmapHeight * 1.0f;
+            mRectDst.right = i1 > i2 ? viewWidth : (int) (bitmapWidth * i3);
+            float i4 = viewWidth * 1.0f / bitmapWidth * 1.0f;
+            int i = i1 > i2 ? (int) (bitmapHeight * i4) : viewHeight;
+            mRectDst.bottom = i;
+            Log.info(bitmapWidth + " ////////////////////////// " + bitmapHeight);
+            Log.info(viewWidth + " ////////////////////////// " + viewHeight);
+            Log.info(i1 + " ////////////////////////// " + i2);
+            Log.info(mRectDst.right + " ////////////////////////// " + mRectDst.bottom + "  : " + i);
 
             canvas.drawBitmap(mBitmap, mRectSrc, mRectDst, mPaint);
         }

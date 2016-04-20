@@ -222,7 +222,6 @@ public class ZoomImagePaperFragment extends Fragment {
         }
         view.addView(image, 0, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
         System.gc();
-
     }
 
 
