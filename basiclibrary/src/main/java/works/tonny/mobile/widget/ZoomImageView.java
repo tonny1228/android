@@ -158,19 +158,24 @@ public class ZoomImageView extends View implements Observer {
                 mRectDst.bottom -= (mRectSrc.bottom - bitmapHeight) * zoomY;
                 mRectSrc.bottom = bitmapHeight;
             }
-            mRectDst.left = 0;
-            mRectDst.top = 0;
-            float i1 = bitmapWidth * 1.0f / bitmapHeight * 1.0f;
-            float i2 = viewWidth * 1.0f / viewHeight * 1.0f;
-            float i3 = viewHeight * 1.0f / bitmapHeight * 1.0f;
-            mRectDst.right = i1 > i2 ? viewWidth : (int) (bitmapWidth * i3);
-            float i4 = viewWidth * 1.0f / bitmapWidth * 1.0f;
-            int i = i1 > i2 ? (int) (bitmapHeight * i4) : viewHeight;
-            mRectDst.bottom = i;
+
+
+            float imageScale = bitmapWidth * 1.0f / bitmapHeight * 1.0f;
+            float viewScale = viewWidth * 1.0f / viewHeight * 1.0f;
+            float zy = viewHeight * 1.0f / bitmapHeight * 1.0f;
+            float zx = viewWidth * 1.0f / bitmapWidth * 1.0f;
+
+            int imageWidth = imageScale > viewScale ? viewWidth : (int) (bitmapWidth * zy);
+            int imageHeight = imageScale > viewScale ? (int) (bitmapHeight * zx) : viewHeight;
+
+            mRectDst.left = 0 + (viewWidth - imageWidth) / 2;
+            mRectDst.top = 0 + (viewHeight - imageHeight) / 2;
+            mRectDst.right = imageWidth + (viewWidth - imageWidth) / 2;
+            mRectDst.bottom = imageHeight + (viewHeight - imageHeight) / 2;
             Log.info(bitmapWidth + " ////////////////////////// " + bitmapHeight);
             Log.info(viewWidth + " ////////////////////////// " + viewHeight);
-            Log.info(i1 + " ////////////////////////// " + i2);
-            Log.info(mRectDst.right + " ////////////////////////// " + mRectDst.bottom + "  : " + i);
+            Log.info(mRectDst.left + " ////////////////////////// " + mRectDst.top);
+            Log.info(zoomX + " ////////////////////////// " + zoomY);
 
             canvas.drawBitmap(mBitmap, mRectSrc, mRectDst, mPaint);
         }
