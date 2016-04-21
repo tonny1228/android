@@ -7,6 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.text.MessageFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -51,6 +52,13 @@ public class Log {
         String msg = String.valueOf(message);
         android.util.Log.i(getClassName(), msg);
         writeLogtoFile("info", getClassName(), msg);
+    }
+
+    public static void info(String message, Object... args) {
+        String msg = String.valueOf(message);
+        String format = MessageFormat.format(msg, args);
+        android.util.Log.i(getClassName(), format);
+        writeLogtoFile("info", getClassName(), format);
     }
 
     public static void info(Number message) {
