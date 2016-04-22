@@ -22,7 +22,9 @@ import java.util.Date;
 import java.util.Map;
 
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 import works.tonny.mobile.utils.ImageTools;
+import works.tonny.mobile.utils.Log;
 import works.tonny.mobile.widget.DateDialogFragment;
 import works.tonny.mobile.widget.TipWatcher;
 
@@ -298,7 +300,12 @@ public class ActivityHelper {
         view.measure(width, height);
         Bitmap bitmap = ImageTools.decodeSampledBitmapFromResource(file, view.getMeasuredWidth(), view.getMeasuredHeight());
 //        Bitmap bitmap = ImageTools.tryGetBitmap(new File(file), view.getMeasuredWidth(), view.getMeasuredHeight());
+        if (bitmap == null) {
+            new File(file).delete();
+        }
         view.setImageBitmap(bitmap);
+//        if (bitmap != null)
+//        Log.info("{0} {1} {2}", view, bitmap);
     }
 
 
@@ -308,12 +315,13 @@ public class ActivityHelper {
         }
         final ImageView view = (ImageView) findViewById(id);
         if (uri.toLowerCase().startsWith("http://")) {
-            new ImageRequest(new ImageRequest.OnRequested() {
-                @Override
-                public void execute(File file) {
-                    setImage(view, file.getAbsolutePath());
-                }
-            }).execute(uri);
+            ImageRequestManager.getInstance().addTask(
+                    new ImageRequest(uri, new ImageRequest.OnRequested() {
+                        @Override
+                        public void execute(File file) {
+                            setImage(view, file.getAbsolutePath());
+                        }
+                    }));
         } else {
             Bitmap bitmap = ImageTools.tryGetBitmap(new File(uri), view.getMeasuredWidth(), view.getMeasuredHeight());
             view.setImageBitmap(bitmap);

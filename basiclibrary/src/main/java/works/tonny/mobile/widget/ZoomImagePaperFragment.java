@@ -24,6 +24,7 @@ import java.util.Map;
 import works.tonny.mobile.Launcher;
 import works.tonny.mobile.R;
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 import works.tonny.mobile.utils.ImageTools;
 import works.tonny.mobile.utils.Log;
 
@@ -190,7 +191,7 @@ public class ZoomImagePaperFragment extends Fragment {
     private void setImageResource(final Entity e, final LinearLayout view, ZoomImageView image, final int position) {
         final ZoomImageView set = image;
         if (e.getFile() == null) {
-            new ImageRequest(new ImageRequest.OnRequested() {
+            ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.OnRequested() {
                 @Override
                 public void execute(File file) {
                     e.setFile(file.getAbsolutePath());
@@ -204,7 +205,8 @@ public class ZoomImagePaperFragment extends Fragment {
                     set.setImage(bitmap);
                     bitmap = null;
                 }
-            }).execute(e.getPath());
+            }));
+//            new ImageRequest().execute(e.getPath());
         } else {
             int width = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED) / 2;
             int height = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED) / 2;

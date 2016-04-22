@@ -22,7 +22,10 @@ public class ImageRequest extends AsyncTask<String, Integer, File> {
 
     private OnRequested onRequested;
 
-    public ImageRequest(OnRequested onRequested) {
+    private String url;
+
+    public ImageRequest(String url, OnRequested onRequested) {
+        this.url = url;
         this.onRequested = onRequested;
     }
 
@@ -35,15 +38,17 @@ public class ImageRequest extends AsyncTask<String, Integer, File> {
 
     @Override
     protected File doInBackground(String... params) {
-        String url = Application.getUrl(params[0]);
+        Log.info("downloading " + url);
         File dir = FileUtils.getExternalStorageDirectory(FileUtils.WEB_CACHE_DIR);
         File f = new File(dir.getAbsolutePath(), MD5.encode(url));
         if (f.exists()) {
+
             return f;
         }
         HttpRequest request = AbstractHttpRequest.getInstance(HttpRequest.Method.Get, url);
         try {
             request.executeToFile(f);
+            Log.info("finished download " + url + "; " + f + " " + f.length());
             return f;
         } catch (HttpRequestException e) {
             Log.error(e);
@@ -61,14 +66,35 @@ public class ImageRequest extends AsyncTask<String, Integer, File> {
         super.onProgressUpdate(values);
     }
 
+    public OnRequested getOnRequested() {
+        return onRequested;
+    }
+
+    public void setOnRequested(OnRequested onRequested) {
+        this.onRequested = onRequested;
+    }
+
     @Override
     protected void onPostExecute(File s) {
         onRequested.execute(s);
 //        ActivityHelper.setImage(view, s.getAbsolutePath());
-        onRequested.execute(s);
+//        onRequested.execute(s);
     }
 
     public static interface OnRequested {
         void execute(File file);
+    }
+
+    public static class SetImage implements OnRequested {
+        private ImageView imageView;
+
+        public SetImage(ImageView imageView) {
+            this.imageView = imageView;
+        }
+
+        @Override
+        public void execute(File file) {
+            ActivityHelper.setImage(imageView, file.getAbsolutePath());
+        }
     }
 }

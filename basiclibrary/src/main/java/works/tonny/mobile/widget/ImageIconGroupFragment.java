@@ -22,6 +22,7 @@ import works.tonny.mobile.ActivityHelper;
 import works.tonny.mobile.IntentUtils;
 import works.tonny.mobile.R;
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -100,12 +101,13 @@ public class ImageIconGroupFragment extends Fragment {
                 else {
 //                    new ImageRequest(img).execute(e.getPath());
                     final ImageView c = img;
-                    new ImageRequest(new ImageRequest.OnRequested() {
-                        @Override
-                        public void execute(File file) {
-                            ActivityHelper.setImage(c, file.getAbsolutePath());
-                        }
-                    }).execute(e.getPath());
+                    ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.SetImage(c)));
+//                    new ImageRequest(new ImageRequest.OnRequested() {
+//                        @Override
+//                        public void execute(File file) {
+//                            ActivityHelper.setImage(c, file.getAbsolutePath());
+//                        }
+//                    }).execute(e.getPath());
                 }
 
                 if (e.getOnClickListener() != null) {

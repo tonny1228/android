@@ -24,6 +24,7 @@ import java.util.Set;
 import works.tonny.mobile.ActivityHelper;
 import works.tonny.mobile.R;
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 import works.tonny.mobile.utils.Log;
 
 
@@ -90,12 +91,13 @@ public class ImageGroupFragment extends Fragment {
                 imageView[i].setImageBitmap(BitmapFactory.decodeFile(e.getPath()));
             else {
                 final ImageView c = imageView[i];
-                new ImageRequest(new ImageRequest.OnRequested() {
-                    @Override
-                    public void execute(File file) {
-                        ActivityHelper.setImage(c, file.getAbsolutePath());
-                    }
-                }).execute(e.getPath());
+                ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.SetImage(c)));
+//                new ImageRequest(new ImageRequest.OnRequested() {
+//                    @Override
+//                    public void execute(File file) {
+//                        ActivityHelper.setImage(c, file.getAbsolutePath());
+//                    }
+//                }).execute(e.getPath());
             }
             imageView[i].setScaleType(ImageView.ScaleType.FIT_XY);
             ImageView c = new ImageView(container.getContext());
@@ -162,12 +164,13 @@ public class ImageGroupFragment extends Fragment {
                     imageView[i].setImageBitmap(BitmapFactory.decodeFile(e.getPath()));
                 else {
                     final ImageView c = imageView[i];
-                    new ImageRequest(new ImageRequest.OnRequested() {
-                        @Override
-                        public void execute(File file) {
-                            ActivityHelper.setImage(c, file.getAbsolutePath());
-                        }
-                    }).execute(e.getPath());
+                    ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.SetImage(c)));
+//                    new ImageRequest(new ImageRequest.OnRequested() {
+//                        @Override
+//                        public void execute(File file) {
+//                            ActivityHelper.setImage(c, file.getAbsolutePath());
+//                        }
+//                    }).execute(e.getPath());
                 }
             }
         } else {
@@ -185,12 +188,13 @@ public class ImageGroupFragment extends Fragment {
             else {
 //                new ImageRequest(imageView[i]).execute(e.getPath());
                 final ImageView c = imageView[i];
-                new ImageRequest(new ImageRequest.OnRequested() {
-                    @Override
-                    public void execute(File file) {
-                        ActivityHelper.setImage(c, file.getAbsolutePath());
-                    }
-                }).execute(e.getPath());
+                ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.SetImage(c)));
+//                new ImageRequest(new ImageRequest.OnRequested() {
+//                    @Override
+//                    public void execute(File file) {
+//                        ActivityHelper.setImage(c, file.getAbsolutePath());
+//                    }
+//                }).execute(e.getPath());
             }
         }
     }

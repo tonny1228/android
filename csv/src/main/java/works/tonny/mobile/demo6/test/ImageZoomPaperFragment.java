@@ -31,6 +31,7 @@ import works.tonny.mobile.ActivityHelper;
 import works.tonny.mobile.Launcher;
 import works.tonny.mobile.R;
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 import works.tonny.mobile.utils.ImageTools;
 import works.tonny.mobile.utils.Log;
 
@@ -265,7 +266,7 @@ public class ImageZoomPaperFragment extends Fragment {
 
         final ZoomImageView set = image;
         if (e.getFile() == null) {
-            new ImageRequest(new ImageRequest.OnRequested() {
+            ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.OnRequested() {
                 @Override
                 public void execute(File file) {
                     e.setFile(file.getAbsolutePath());
@@ -279,7 +280,22 @@ public class ImageZoomPaperFragment extends Fragment {
                     set.setImage(bitmap);
                     bitmap = null;
                 }
-            }).execute(e.getPath());
+            }));
+//            new ImageRequest(new ImageRequest.OnRequested() {
+//                @Override
+//                public void execute(File file) {
+//                    e.setFile(file.getAbsolutePath());
+//                    int width = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED) / 2;
+//                    int height = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED) / 2;
+//                    view.measure(width, height);
+//                    Bitmap bitmap = ImageTools.decodeSampledBitmapFromResource(file.getAbsolutePath(), view.getMeasuredWidth() / 10, view.getMeasuredHeight() / 10);
+//                    if (set.getBitmap() != null) {
+//                        set.getBitmap().recycle();
+//                    }
+//                    set.setImage(bitmap);
+//                    bitmap = null;
+//                }
+//            }).execute(e.getPath());
         } else {
             int width = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED) / 2;
             int height = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED) / 2;

@@ -29,6 +29,7 @@ import java.util.Set;
 import works.tonny.mobile.ActivityHelper;
 import works.tonny.mobile.R;
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 import works.tonny.mobile.utils.Log;
 
 
@@ -192,14 +193,15 @@ public class ImageViewPaperFragment extends Fragment {
 
     private void setImageResource(final Entity e, final ImageView view, final int position) {
         if (e.getFile() == null) {
-            new ImageRequest(new ImageRequest.OnRequested() {
-                @Override
-                public void execute(File file) {
-                    e.setFile(file.getAbsolutePath());
-                    if (position == index)
-                        ActivityHelper.setImage(view, e.getFile());
-                }
-            }).execute(e.getPath());
+            ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.SetImage(view)));
+//            new ImageRequest(new ImageRequest.OnRequested() {
+//                @Override
+//                public void execute(File file) {
+//                    e.setFile(file.getAbsolutePath());
+//                    if (position == index)
+//                        ActivityHelper.setImage(view, e.getFile());
+//                }
+//            }).execute(e.getPath());
         } else {
             ActivityHelper.setImage(view, e.getFile());
         }

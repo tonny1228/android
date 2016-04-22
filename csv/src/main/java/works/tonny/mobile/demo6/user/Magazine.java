@@ -30,6 +30,7 @@ import works.tonny.mobile.demo6.R;
 import works.tonny.mobile.demo6.TitleHelper;
 import works.tonny.mobile.http.RequestTask;
 import works.tonny.mobile.utils.ImageRequest;
+import works.tonny.mobile.utils.ImageRequestManager;
 import works.tonny.mobile.utils.Log;
 import works.tonny.mobile.utils.XMLParser2;
 import works.tonny.mobile.widget.AbstractListActivity;
@@ -74,12 +75,13 @@ public class Magazine extends Activity {
                     View view = getLayoutInflater().inflate(R.layout.user_magazie_item, null);
                     final ImageView img = (ImageView) view.findViewById(R.id.list_item_right);
                     TextView title = (TextView) view.findViewById(R.id.list_item_title);
-                    new ImageRequest(new ImageRequest.OnRequested() {
-                        @Override
-                        public void execute(File file) {
-                            ActivityHelper.setImage(img, file.getAbsolutePath());
-                        }
-                    }).execute(((Map) o).get("img").toString());
+                    ImageRequestManager.getInstance().addTask(new ImageRequest(((Map) o).get("img").toString(), new ImageRequest.SetImage(img)));
+//                    new ImageRequest(new ImageRequest.OnRequested() {
+//                        @Override
+//                        public void execute(File file) {
+//                            ActivityHelper.setImage(img, file.getAbsolutePath());
+//                        }
+//                    }).execute(((Map) o).get("img").toString());
 
                     title.setText(((Map) o).get("name").toString());
                     final Map item = (Map) o;
@@ -105,13 +107,13 @@ public class Magazine extends Activity {
                         final ImageView img = (ImageView) view.findViewById(R.id.list_item_right);
                         TextView title = (TextView) view.findViewById(R.id.list_item_title);
 //                        new ImageRequest(img).execute(((Map) l.get(i)).get("img").toString());
-                        Log.info("////////////////////////////////////////////////////////////////////////");
-                        new ImageRequest(new ImageRequest.OnRequested() {
-                            @Override
-                            public void execute(File file) {
-                                ActivityHelper.setImage(img, file.getAbsolutePath());
-                            }
-                        }).execute(((Map) l.get(i)).get("img").toString());
+                        ImageRequestManager.getInstance().addTask(new ImageRequest(((Map) l.get(i)).get("img").toString(), new ImageRequest.SetImage(img)));
+//                        new ImageRequest(new ImageRequest.OnRequested() {
+//                            @Override
+//                            public void execute(File file) {
+//                                ActivityHelper.setImage(img, file.getAbsolutePath());
+//                            }
+//                        }).execute(((Map) l.get(i)).get("img").toString());
 
                         title.setText(((Map) l.get(i)).get("name").toString());
                         img.setOnClickListener(new View.OnClickListener() {
@@ -135,12 +137,13 @@ public class Magazine extends Activity {
                             final ImageView img1 = (ImageView) view.findViewById(R.id.list_item_right1);
                             TextView title1 = (TextView) view.findViewById(R.id.list_item_title1);
 //                            new ImageRequest(img1).execute(((Map) l.get(i)).get("img").toString());
-                            new ImageRequest(new ImageRequest.OnRequested() {
-                                @Override
-                                public void execute(File file) {
-                                    ActivityHelper.setImage(img1, file.getAbsolutePath());
-                                }
-                            }).execute(((Map) l.get(i)).get("img").toString());
+                            ImageRequestManager.getInstance().addTask(new ImageRequest(((Map) l.get(i)).get("img").toString(), new ImageRequest.SetImage(img1)));
+//                            new ImageRequest(new ImageRequest.OnRequested() {
+//                                @Override
+//                                public void execute(File file) {
+//                                    ActivityHelper.setImage(img1, file.getAbsolutePath());
+//                                }
+//                            }).execute(((Map) l.get(i)).get("img").toString());
 
                             title1.setText(((Map) l.get(i)).get("name").toString());
                             img1.setOnClickListener(new View.OnClickListener() {
