@@ -67,7 +67,7 @@ public abstract class RequestActivity extends Activity {
                 xml = request.executeToString();
                 XMLParser xmlParser = new XMLParser();
                 xmlParser.parse(xml);
-                Log.info(xml);
+//                Log.info(xml);
                 return xmlParser.getDatas();
             } catch (HttpRequestException e) {
                 e.printStackTrace();

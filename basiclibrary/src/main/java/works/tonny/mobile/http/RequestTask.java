@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import java.util.Map;
 
 import works.tonny.mobile.R;
+import works.tonny.mobile.utils.Log;
 import works.tonny.mobile.utils.XMLParser;
 import works.tonny.mobile.widget.LoadingDialog;
 
@@ -33,6 +34,7 @@ public class RequestTask extends AsyncTask<String, Integer, Map<String, Object>>
             xml = request.executeToString();
             XMLParser xmlParser = new XMLParser();
             xmlParser.parse(xml);
+            Log.info(xml);
             return xmlParser.getDatas();
         } catch (HttpRequestException e) {
             e.printStackTrace();

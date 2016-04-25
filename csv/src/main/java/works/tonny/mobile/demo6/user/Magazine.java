@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -63,6 +64,14 @@ public class Magazine extends Activity {
         new RequestTask(this, new RequestTask.Requested() {
             @Override
             public void execute(Map<String, Object> map) {
+                if (map == null) {
+                    Toast.makeText(Magazine.this, "没有杂志", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (map.get("s2m.body.tag") != null) {
+                    Toast.makeText(Magazine.this, ((Map) map.get("s2m.body.tag")).get("value").toString(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Object o = map.get("data.list.item");
                 String years = (String) map.get("data.menu.years");
                 Message m = new Message();
@@ -99,7 +108,10 @@ public class Magazine extends Activity {
                     });
                 } else {
                     List l = (List) o;
-                    Log.info(l.size());
+//                    Log.info(l.size());
+                    if (l == null) {
+                        return;
+                    }
                     for (int i = 0; i < l.size(); i++) {
                         final Map item = (Map) l.get(i);
                         View view = getLayoutInflater().inflate(R.layout.user_magazie_item, null);

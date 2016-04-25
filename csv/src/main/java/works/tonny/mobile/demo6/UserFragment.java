@@ -90,7 +90,7 @@ public class UserFragment extends Fragment {
     private void setUser() {
 
         try {
-            Log.info(Application.getUser());
+//            Log.info(Application.getUser());
             if (Application.getUser() != null) {
                 instance.setOnClickListener(R.id.user, UserActivity.class);
                 instance.setOnClickListener(R.id.fj, Nearby.class);
@@ -104,7 +104,6 @@ public class UserFragment extends Fragment {
                 instance.setOnClickListener(R.id.pay, PayActivity.class);
                 instance.setOnClickListener(R.id.setting, SettingActivity.class);
                 if (!logined) {
-                    Log.info("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
                     new Request().execute();
                 }
                 logined = true;
@@ -126,12 +125,17 @@ public class UserFragment extends Fragment {
 //            instance.setOnClickListener(R.id.order, LoginActivity.class);
             instance.setOnClickListener(R.id.pay_list, LoginActivity.class);
             instance.setOnClickListener(R.id.pay, LoginActivity.class);
+            instance.setOnClickListener(R.id.magazine, LoginActivity.class);
+            instance.setOnClickListener(R.id.youji, LoginActivity.class);
+            instance.setOnClickListener(R.id.pay, LoginActivity.class);
             instance.setOnClickListener(R.id.setting, LoginActivity.class);
             instance.setText(R.id.nickname, "请登录");
             instance.setText(R.id.quanshe_name, "");
             instance.setImage(R.id.user_head, R.drawable.noface);
 //            instance.setVisible(R.id.quanshe, false);
             instance.setVisible(R.id.message, false);
+            instance.setVisible(R.id.message_num_bg, false);
+            instance.setText(R.id.message_num, "");
 
             logined = Application.getUser() != null;
             logined = false;
@@ -217,6 +221,7 @@ public class UserFragment extends Fragment {
                 XMLParser xmlParser = new XMLParser();
                 String xml = request.executeToString();
                 xmlParser.parse(xml);
+
                 IOUtils.cacheObject(xmlParser.getDatas(), FileUtils.getCacheDirFile("/user"));
                 return (Map<String, Object>) xmlParser.getDatas();
             } catch (AuthException e) {

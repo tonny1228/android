@@ -2,7 +2,9 @@ package works.tonny.mobile.widget;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -190,6 +192,9 @@ public class ZoomImagePaperFragment extends Fragment {
 
     private void setImageResource(final Entity e, final LinearLayout view, ZoomImageView image, final int position) {
         final ZoomImageView set = image;
+        Resources res = getResources();
+        Bitmap bmp = BitmapFactory.decodeResource(res, R.drawable.blank);
+        set.setImage(bmp);
         if (e.getFile() == null) {
             ImageRequestManager.getInstance().addTask(new ImageRequest(e.getPath(), new ImageRequest.OnRequested() {
                 @Override

@@ -38,7 +38,7 @@ public class ImageRequest extends AsyncTask<String, Integer, File> {
 
     @Override
     protected File doInBackground(String... params) {
-        Log.info("downloading " + url);
+//        Log.info("downloading " + url);
         File dir = FileUtils.getExternalStorageDirectory(FileUtils.WEB_CACHE_DIR);
         File f = new File(dir.getAbsolutePath(), MD5.encode(url));
         if (f.exists()) {
@@ -48,7 +48,7 @@ public class ImageRequest extends AsyncTask<String, Integer, File> {
         HttpRequest request = AbstractHttpRequest.getInstance(HttpRequest.Method.Get, url);
         try {
             request.executeToFile(f);
-            Log.info("finished download " + url + "; " + f + " " + f.length());
+//            Log.info("finished download " + url + "; " + f + " " + f.length());
             return f;
         } catch (HttpRequestException e) {
             Log.error(e);
