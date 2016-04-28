@@ -123,7 +123,7 @@ public class RechargeActivity extends Activity {
                 finish();
                 return;
             }
-            Log.info(map);
+//            Log.info(map);
             init(map);
         }
 
@@ -136,7 +136,7 @@ public class RechargeActivity extends Activity {
                 xml = request.executeToString();
                 XMLParser xmlParser = new XMLParser();
                 xmlParser.parse(xml);
-                Log.info(xml);
+//                Log.info(xml);
                 return (Map<String, Object>) xmlParser.getDatas();
             } catch (HttpRequestException e) {
                 Log.error(e);

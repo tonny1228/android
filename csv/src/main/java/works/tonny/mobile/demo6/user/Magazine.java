@@ -70,6 +70,7 @@ public class Magazine extends Activity {
                 }
                 if (map.get("s2m.body.tag") != null) {
                     Toast.makeText(Magazine.this, ((Map) map.get("s2m.body.tag")).get("value").toString(), Toast.LENGTH_SHORT).show();
+                    finish();
                     return;
                 }
                 Object o = map.get("data.list.item");
